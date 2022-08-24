@@ -46,7 +46,7 @@ public class EditServlet extends HttpServlet {
 		}
 		user.setProfile(imagename);
 		s.setAttribute("currentuser", user);
-		String path="C:\\Users\\ktaus\\eclipse-workspace\\Techblog\\src\\main\\webapp\\profile_pics\\"+imagename;
+		String path="C:\\Users\\ktaus\\git\\Bloging-Website\\Techblog\\src\\main\\webapp\\profile_pics"+imagename;
 		InputStream is=part.getInputStream();	
 		UserDao userdao=new UserDao(ConnectionProvider.getConn());
 		boolean ans=userdao.updateUser(user);
