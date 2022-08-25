@@ -37,7 +37,7 @@ public class AddPostServlet extends HttpServlet {
 		PostDao postdao=new PostDao(ConnectionProvider.getConn());
 		boolean f=postdao.savePostData(p);
 		if(f) {
-			String path="C:\\Users\\ktaus\\git\\Bloging-Website\\Techblog\\src\\main\\webapp\\profile_pics"+imageName;
+			String path=request.getRealPath("/")+"blog_pics"+"/"+imageName;
 			ProfileHelper.saveProfile(part.getInputStream(), path);
 			response.getWriter().println("done");
 		}else {

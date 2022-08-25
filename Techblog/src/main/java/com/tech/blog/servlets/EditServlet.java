@@ -46,14 +46,14 @@ public class EditServlet extends HttpServlet {
 		}
 		user.setProfile(imagename);
 		s.setAttribute("currentuser", user);
-		String path="C:\\Users\\ktaus\\git\\Bloging-Website\\Techblog\\src\\main\\webapp\\profile_pics"+imagename;
+		String path=request.getRealPath("/")+"profile_pics"+"/"+imagename;
 		InputStream is=part.getInputStream();	
 		UserDao userdao=new UserDao(ConnectionProvider.getConn());
 		boolean ans=userdao.updateUser(user);
 		if(ans) {
 			
 			if(ProfileHelper.saveProfile(is, path)) {
-				Message msg=new Message("Profile Updated Succesfully!","success","alert-success");
+				Message msg=new Message(path,"success","alert-success");
 				s.setAttribute("msg", msg);
 				if(!imagename.equals(oldprofilename)) {
 				try {
