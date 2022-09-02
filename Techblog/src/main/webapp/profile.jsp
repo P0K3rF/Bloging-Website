@@ -38,6 +38,11 @@ if (user == null) {
 	font-style: italic;
 	font-weight: bold;
 }
+
+.box{
+padding-left: 50px;
+}
+
 </style>
 <meta charset="ISO-8859-1">
 <title>TechBlog</title>
@@ -107,7 +112,7 @@ if (user == null) {
 		<div class="container-fluid">
 			<div class="row mt-4">
 				<!-- First coloumnd -->
-				<div class="col-md-3">
+				<div class="col-md-2">
 					<!-- Categories  -->
 					<div class="list-group">
 						<a href="#" onclick="getPost(0,this)"
@@ -130,7 +135,7 @@ if (user == null) {
 					</div>
 				</div>
 				<!-- Second coloumnd -->
-				<div class="col-md-9" style="border-left: 2px solid black">
+				<div class="col-md-10" style="border-left: 2px solid black">
 					<!-- showing all post here -->
 
 					<div class="container text-center" id="loader">
@@ -361,6 +366,7 @@ if (user == null) {
 
 		const mytime = setTimeout(remo, 5000);
 		function remo() {
+			console.log("timeout method");
 			document.getElementById("alert-msg").remove();
 		}
 
@@ -378,7 +384,6 @@ if (user == null) {
 	<script>
 		$(document).ready(function(e) {
 			$("#add_Post_form").on("submit", function(event) {
-				console.log("submit button clicked");
 				//this code gets called when form is submitted
 				event.preventDefault();
 				let form = new FormData(this);
@@ -396,7 +401,7 @@ if (user == null) {
 
 					},
 					error : function(jqXHR, textStatus, errorThrown) {
-						console.log(errorThrown);
+						
 
 					},
 					processData : false,
@@ -417,7 +422,6 @@ if (user == null) {
 			url:"load_post.jsp",
 			data:{cid:catId},
 			success:function(data,textStatus,jqXHR){
-				console.log(data);
 				$("#loader").hide();
 				$("#post-container").show();
 				$("#post-container").html(data);

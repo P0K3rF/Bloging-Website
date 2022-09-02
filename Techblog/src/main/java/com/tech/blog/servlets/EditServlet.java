@@ -53,7 +53,7 @@ public class EditServlet extends HttpServlet {
 		if(ans) {
 			
 			if(ProfileHelper.saveProfile(is, path)) {
-				Message msg=new Message(path,"success","alert-success");
+				Message msg=new Message("Profile updated successfully","success","alert-success");
 				s.setAttribute("msg", msg);
 				if(!imagename.equals(oldprofilename)) {
 				try {

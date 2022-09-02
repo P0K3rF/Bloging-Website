@@ -7,6 +7,7 @@
 <%@page import="com.tech.blog.dao.PostDao"%>
 
 <div class="row">
+
 	<%
 	Thread.sleep(500);
 	PostDao pd = new PostDao(ConnectionProvider.getConn());
@@ -26,11 +27,8 @@
 	for (Post p : posts) {
 	%>
 
-	<div class="col-md-5 mt-2 offset-1">
-
-		<div class="card shadow-lg p-3 mb-5 bg-white rounded">
-
-
+	<div class="col-md-5 mt-3 box">
+		<div class="card shadow-lg p-3 mb-5  bg-white rounded">
 			<div class="card-header">
 
 				<%
@@ -45,10 +43,10 @@
 
 						</div>
 						<div class="col-md-6 pt-2">
-						 <h5><%=us.getName()%></h5>
+							<h5><%=us.getName()%></h5>
 						</div>
 						<div class="col-md-4 pt-2 post-date">
-						<h6><%=DateFormat.getDateInstance().format(p.getpDate())%></h6>
+							<h6><%=DateFormat.getDateInstance().format(p.getpDate())%></h6>
 						</div>
 					</div>
 
@@ -62,7 +60,7 @@
 			if (!p.getpPic().equals("")) {
 			%>
 			<div class="container text-center px-2 my-2">
-				<img src="blog_pics/<%=p.getpPic()%>" class="card-img-top "
+				<img src="blog_pics/<%=p.getpPic()%>" class="card-img-top img-fluid"
 					style="height: 300px; width: 350px;">
 			</div>
 			<%

@@ -62,6 +62,7 @@
 		<div class="row mb-2">
 			<div class="col-md-4">
 				<div class="card">
+				
 					<div class="card-body">
 						<h5 class="card-title">Java Programming</h5>
 						<p class="card-text">Some quick example text to build on the
@@ -75,6 +76,7 @@
 
 			<div class="col-md-4">
 				<div class="card">
+				
 					<div class="card-body">
 						<h5 class="card-title">Java Programming</h5>
 						<p class="card-text">Some quick example text to build on the
@@ -89,6 +91,7 @@
 
 			<div class="col-md-4">
 				<div class="card">
+				
 					<div class="card-body">
 						<h5 class="card-title">Java Programming</h5>
 						<p class="card-text">Some quick example text to build on the
@@ -104,6 +107,7 @@
 		<div class="row">
 			<div class="col-md-4">
 				<div class="card">
+				
 					<div class="card-body">
 						<h5 class="card-title">Java Programming</h5>
 						<p class="card-text">Some quick example text to build on the
@@ -117,6 +121,7 @@
 
 			<div class="col-md-4">
 				<div class="card">
+				
 					<div class="card-body">
 						<h5 class="card-title">Java Programming</h5>
 						<p class="card-text">Some quick example text to build on the
@@ -131,6 +136,7 @@
 
 			<div class="col-md-4">
 				<div class="card">
+				
 					<div class="card-body">
 						<h5 class="card-title">Java Programming</h5>
 						<p class="card-text">Some quick example text to build on the

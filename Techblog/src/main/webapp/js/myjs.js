@@ -17,7 +17,7 @@ function doLike(pid,uid){
 			
 		},
 		error:function(jqXHR,textStatus,errorThrown){
-			console.log(errorThrown);
+			
 		},
 		
 	});

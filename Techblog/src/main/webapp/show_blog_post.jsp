@@ -67,7 +67,6 @@ Post p = postDao.getPostPostById(postId);
 	border: 1px solid #e2e2e2;
 	padding-top: 15px;
 }
-
 </style>
 
 
@@ -77,7 +76,9 @@ Post p = postDao.getPostPostById(postId);
 </head>
 <body>
 	<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v14.0" nonce="r9V9Tbqo"></script>
+	<script async defer crossorigin="anonymous"
+		src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v14.0"
+		nonce="r9V9Tbqo"></script>
 
 	<nav
 		class="navbar navbar-expand-lg navbar-dark bg-dark primary-background">
@@ -189,12 +190,15 @@ Post p = postDao.getPostPostById(postId);
 								LikeDao ld = new LikeDao(ConnectionProvider.getConn());
 								%><%=ld.countLikeOnPost(p.getPid())%></span></a> <a
 							class="btn btn-outline-light btn-lg"><i
-							class="fa fa-commenting-o"></i><span class="fb-comments-count" data-href="http://127.0.0.1/profile.html?post_id=<%=p.getPid() %>"></span></a>
+							class="fa fa-commenting-o"></i><span class="fb-comments-count"
+							data-href="http://127.0.0.1/profile.html?post_id=<%=p.getPid()%>"></span></a>
 					</div>
 					<div class="card-footer">
-					
-					<div class="fb-comments" data-href="http://127.0.0.1/profile.html?post_id=<%=p.getPid() %>" data-width="" data-numposts="5"></div>
-					
+
+						<div class="fb-comments"
+							data-href="http://127.0.0.1/profile.html?post_id=<%=p.getPid()%>"
+							data-width="" data-numposts="5"></div>
+
 					</div>
 
 					<br>
@@ -205,7 +209,7 @@ Post p = postDao.getPostPostById(postId);
 			</div>
 
 		</div>
-		
+
 	</div>
 
 
@@ -488,7 +492,7 @@ Post p = postDao.getPostPostById(postId);
 		}
 	</script>
 
-<script>
+	<script>
 
 function doLike(pid,uid){
 	const d={
